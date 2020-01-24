@@ -29,9 +29,11 @@
         caixa.style.width = 100;
         caixa.style.height = 100;
         caixa.style.backgroundColor = '#f00';
+        caixa.onmouseover = function ()
+        {
+          caixa.style.backgroundColor = getRandomColor();
+        }
         linkdiv.appendChild(caixa);
-        var linkbox = document.querySelector("div[class = box]")
-        
       }
 
     </script>
