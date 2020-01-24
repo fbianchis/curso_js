@@ -7,20 +7,33 @@
   </head>
   <body>
     <div id = "app">
-
+      <input type="text" name="nome">
+      <button onClick="adicionar()">
+        Adicionar
+      </button>
     </div>
     <script>
       var interligar = document.querySelector('div');
       var nomes = ["Diego","Gabriel","Lucas"];
       var listaElemento = document.createElement('ul');
       interligar.appendChild(listaElemento);
-      var item =  document.createElement('li');
+
       for (nome of nomes)
       {
+        var item =  document.createElement('li');
         var textoElemento = document.createTextNode(nome);
         item.appendChild(textoElemento);
         listaElemento.appendChild(item);
+      }
+
+      function adicionar ()
+      {
+        var inputElemento = document.querySelector('div input')
         item = document.createElement('li');
+        textoElemento = document.createTextNode(inputElemento.value);
+        item.appendChild(textoElemento);
+        listaElemento.appendChild(item);
+        inputElemento.value = '';
       }
     </script>
   </body>
