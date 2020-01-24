@@ -1,0 +1,28 @@
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>
+        Desafios
+      </title>
+  </head>
+  <body>
+    <div id = "app">
+      <button type="button" name="button">
+        Pressione aqui
+      </button>
+    </div>
+    <script>
+      var interligarBotao = document.querySelector("button");
+      interligarBotao.onclick = function()
+      {
+        var linkdiv = document.querySelector('div')
+        var caixa = document.createElement("div");
+        caixa.className = 'box';
+        caixa.style.width = 100;
+        caixa.style.height = 100;
+        caixa.style.backgroundColor = '#f00';
+        linkdiv.appendChild(caixa);
+      }
+    </script>
+  </body>
+</html>
